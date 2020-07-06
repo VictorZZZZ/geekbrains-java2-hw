@@ -12,9 +12,15 @@ public class Main {
         phoneBook.add(new Person("Петров","389456321","email5@gb.ru"));
         phoneBook.add(new Person("Степанов","489456321","email6@gb.ru"));
         phoneBook.add(new Person("Иванов","589456321","email7@gb.ru"));
-        System.out.println("Enter the surname:");
         Scanner scanner = new Scanner(System.in);
-        phoneBook.showPhonesBySurname(scanner.nextLine());
-        phoneBook.showEmailsBySurname(scanner.nextLine());
+        String str;
+        do{
+            System.out.println("Enter the surname(for exit enter \"exit\"):");
+            str = scanner.nextLine();
+            if(!str.equals("exit")) {
+                phoneBook.showPhonesBySurname(str);
+                phoneBook.showEmailsBySurname(str);
+            }
+        } while(!str.equals("exit"));
     }
 }
