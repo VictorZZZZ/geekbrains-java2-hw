@@ -20,18 +20,14 @@ public class MainClass {
 
     private static float[] straightCount(){
         float[] arr = new float[size];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i]=1;
-        }
+        Arrays.fill(arr, 1);
         calc(arr,0);
         return arr;
     }
 
     private static float[] threadsCount(){
         float[] arr = new float[size];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i]=1;
-        }
+        Arrays.fill(arr, 1);
         float[] a1 =new float[h];
         float[] a2 =new float[h];
         System.arraycopy(arr, 0, a1, 0, h);
