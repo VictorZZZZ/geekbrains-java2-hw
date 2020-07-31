@@ -1,9 +1,12 @@
 .idea
 
-/Lesson2-Exceptions/Lesson2-Exceptions.iml
-/Lesson3-Collections/target/classes/META-INF/Lesson3-Collections.kotlin_module
-/Lesson5-threads/target/classes/ru/gb/CalcInThread.class
-/Lesson5-threads/target/classes/ru/gb/MainClass.class
+/Java-2/Lesson2-Exceptions/Lesson2-Exceptions.iml
+/Java-2/Lesson3-Collections/target/classes/META-INF/Lesson3-Collections.kotlin_module
+/Java-2/Lesson5-threads/target/classes/ru/gb/CalcInThread.class
+/Java-2/Lesson5-threads/target/classes/ru/gb/MainClass.class
 
 target\
 
+/Java-3/Lesson1-Generics/target/classes/ru/gb/
+/Java-3/Lesson1-Generics/Lesson1-Generics.iml
+/Java-3/Java-3.iml
