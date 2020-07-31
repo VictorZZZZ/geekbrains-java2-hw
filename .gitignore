@@ -1,1 +1,6 @@
 .idea
+target\
+/Lesson5-threads/target/classes/ru/gb/
+/Lesson3-Collections/target/classes/META-INF/
+/Lesson2-Exceptions/
+/Lesson1/Lesson1.iml
