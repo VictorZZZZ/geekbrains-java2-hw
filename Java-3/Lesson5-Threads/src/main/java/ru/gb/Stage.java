@@ -7,4 +7,22 @@ public abstract class Stage {
         return description;
     }
     public abstract void go(Car c);
+    private boolean isLast = false;
+    private boolean isWinnerExists = false;
+
+    public boolean isLast() {
+        return isLast;
+    }
+
+    public void setLast(boolean last) {
+        isLast = last;
+    }
+
+    public boolean isWinnerExists() {
+        return isWinnerExists;
+    }
+
+    public void setWinnerExists(boolean winnerExists) {
+        isWinnerExists = winnerExists;
+    }
 }
