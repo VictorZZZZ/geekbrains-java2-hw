@@ -1,14 +1,20 @@
 package ru.gb;
 
+import java.util.concurrent.Semaphore;
+
 public class Tunnel extends Stage {
-    public Tunnel() {
+    private Semaphore semaphore;
+
+    public Tunnel(Semaphore semaphore) {
         this.length = 80;
         this.description = "Тоннель " + length + " метров";
+        this.semaphore=semaphore;
     }
     @Override
     public void go(Car c) {
         try {
             try {
+                semaphore.acquire();
                 System.out.println(c.getName() + " готовится к этапу(ждет): " + description);
                 System.out.println(c.getName() + " начал этап: " + description);
                 Thread.sleep(length / c.getSpeed() * 1000);
@@ -16,6 +22,14 @@ public class Tunnel extends Stage {
                 e.printStackTrace();
             } finally {
                 System.out.println(c.getName() + " закончил этап: " + description);
+                semaphore.release();
+                if(isLast()) {
+                    System.out.println(c.getName() + " закончил гонку!");
+                    if(!isWinnerExists()){
+                        this.setWinnerExists(true);
+                        System.out.println(c.getName() + " ПОБЕДИТЕЛЬ!!!!");
+                    }
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

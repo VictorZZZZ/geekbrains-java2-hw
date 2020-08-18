@@ -11,6 +11,13 @@ public class Road extends Stage {
             System.out.println(c.getName() + " начал этап: " + description);
             Thread.sleep(length / c.getSpeed() * 1000);
             System.out.println(c.getName() + " закончил этап: " + description);
+            if(isLast()) {
+                System.out.println(c.getName() + " закончил гонку!");
+                if(!isWinnerExists()){
+                    this.setWinnerExists(true);
+                    System.out.println(c.getName() + " ПОБЕДИТЕЛЬ!!!!");
+                }
+            }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
